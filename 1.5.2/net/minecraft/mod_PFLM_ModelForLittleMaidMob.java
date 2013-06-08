@@ -4,7 +4,7 @@ public class mod_PFLM_ModelForLittleMaidMob extends BaseMod
 {
 	public String getVersion()
 	{
-		return "1.5.2-1b";
+		return "1.5.2-1c";
 	}
 
 	public void load()
@@ -12,9 +12,9 @@ public class mod_PFLM_ModelForLittleMaidMob extends BaseMod
 		if (!ModLoader.isModLoaded("PFLM_PlayerFormLittleMaid")) {
 			//System.out.println("mod_PlayerFormLittleMaidModelForLittleMaidMob-!PFLM_PlayerFormLittleMaid");
 			MMM_FileManager.getModFile("MultiModel", "MultiModel");
-			MMM_TextureManager.addSearch("MultiModel", "/mob/littleMaid/", "MultiModel_");
+			MMM_TextureManager.instance.addSearch("MultiModel", "/mob/littleMaid/", "MultiModel_");
 			MMM_FileManager.getModFile("playerformlittlemaid", "playerformlittlemaid");
-			MMM_TextureManager.addSearch("playerformlittlemaid", "/mob/littleMaid/", "MultiModel_");
+			MMM_TextureManager.instance.addSearch("playerformlittlemaid", "/mob/littleMaid/", "MultiModel_");
 		} else {
 			//System.out.println("mod_PlayerFormLittleMaidModelForLittleMaidMob-load PFLM_PlayerFormLittleMaid");
 		}
